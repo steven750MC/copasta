@@ -1,84 +1,219 @@
-.page{
-    display:flex;
+html {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+    display:flex ;
     flex-direction:column;
-    user-select: none;
+  font-family: 'YekanBakh-Regular';
+  background-color: #181B22;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  width:100%;
+  user-select: none;
+  transition: all 3s ease;
+}
+.topbar{
+    display:flex ;
+  margin-top:0px;
+  width:100%;
+  height: 70px;
+  background-color: #0050C6;
+  z-index: 10;
+  overflow-x:hidden;
+  box-shadow: 0px 2px 10px #0050C6;
+}
+.minefa{
+    font-weight:1000;
+    text-shadow: 0px 2px 0px #002C6F;
+    color:white;
+    padding:10px;
+    font-size: 30px;
+    text-align:center;
+    width:100%;
+}
+.content{
+    opacity: 0;
+  padding: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right; 
+  transition: all 3s ease;
+}
+.content.show{
+    opacity:1;
+}
+.title{
+  font-weight: bold;
+  width:100%;
+  max-width:100%;
+  font-size: 30px;
+  margin-top: 180px;
+  margin-bottom: 0px;
+  transition: all 2s ease;
+}
+.cover{
+    position: relative;
+    margin-top: 20px; 
+    width:100%;
+  background-color:white;
+  border-radius: 20px;
+}
+.photo{
+    position: absolute;
+  width: 100%;
+  height: 170px;
+  border-radius: 20px;
+  top:0px;
+  left:0px;
+  box-shadow: 0px 0px 10px black;
+}
+.shadow{
+  background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0.5));
+  position: absolute;
+  width:100%;
+  height:170px;
+  border-radius: 20px;
+  top:0px;
+  left:0px;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+.shadow:hover{
+    opacity:0;
+}
+.covercard{
+    z-index:2;
+    position: absolute;
+    bottom: -160px;
+    right:10px;
+    padding: 2px;
+    max-width: 35%;
+    overflow:hidden;
+    border-radius:100px;
+    display:flex;
+    flex-direction: row;
+    background:rgba(80,80,80,0.9);
+    border: 2px solid gray;
+    transition:all 1.5s ease;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.5);
+}
+.covercard:hover{
+    transform: translateY(-10px) translateX(-30px) scale(1.4);
+    max-width: 50%;
+    background-color: #00D5FF;
+    border-radius:10px;
+    border: 2px groove #008FFF;
+    box-shadow: 0px 2px 7px rgba(0,0,255,0.5);
+    filter: hue-rotate(360deg);
+}
+.creatorimg{
+    border-radius:100px;
+    height:30px;
+    border-radius:100px;
+    border: 2px solid gray;
+}
+.creator{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:white;
+    font-size: 18px;
+    margin-right:5px;
+}
+.creator:hover{
+    text-overflow: clip;
+    overflow: scroll;
+}
+p{
+  width: 100%;
+  font-size: 18px;
+}
+.naghl{
+    font-size: 15px;
+    border-left:9px groove blue;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    box-shadow: 0px 4px 5px rgba(105,105,105,0.2);
+    padding: 10px;
+    width:100%;
+    user-select: text;
+}
+.naghl:active{
+    background:rgba(255,255,255,0.12);
+    filter: hue-rotate(30deg);
+}
+.buttons{
+    pointer-events: none;
+  display:flex;
+  margin-top: 40px;
+  flex-direction: row;
+  justify-content:center;
+}
+.right-icon{
+  font-size: 20px;
+  margin: 30px;
+  padding: 8px;
+  width: 80px;
+  transition: filter 0.3s;
+  animation: 10s right-icon infinite;
+}
+.left-icon{
+  font-size: 20px;
+  margin: 30px;
+  padding: 8px;
+  width: 80px;
+  transition: filter 0.3s;
+  animation: 10s left-icon infinite;
+}
+@keyframes left-icon{
+  0% {filter: brightness(100%);}
+  50% {filter: brightness(200%);}
+  100% {filter: brightness(100%);}
+}
+@keyframes right-icon{
+  0% {filter: brightness(100%);}
+  50% {filter: brightness(200%);}
+  100% {filter: brightness(100%);}
+}
+.toptext{
+    margin-top: 20px;
+    color: #545454;
+}
+.footer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
+    text-align:right;
+    width:100%;
+    z-index: -10;
+    background-color:black;
 }
-.button{
-    color:white;
-    min-width: 250px;
-    font-size: 22px;
-    border:3px double #00A4FF;
-    margin: 15px;
-    margin-right: 55px;
-    margin-left: 55px;
-    padding: 10px;
-    background-color: #00E7FF;
-    box-shadow: 0px 10px 0px #00C4FF;
-    text-shadow: 0px 0px 5px #00FFFF;
-    border-radius: 20px;
-    transition: all 1s ease;
-}  
-.button:hover{
-    box-shadow: 0px 0px 0px #00C4FF; 
-    transform: translateY(10px);
-    filter: hue-rotate(400deg);
-} 
-.copy{
-    min-width: 250px;
-    color:white;
-    font-size: 22px;
-    border:3px double #8D00FF;
-    margin: 15px;
-    margin-right: 55px;
-    margin-left: 55px;
-    padding: 10px;
-    background-color: #FF00D2;
-    box-shadow: 0px -2px 5px #E100FF;
-    border-radius: 20px;
-    transition: all 0.5s ease;
+.footer-img{
+    width:100%;
+    pointer-events: none;
+    animation: footer 10s infinite;
+    box-shadow: 0px -1px 0px rgba(0,220,3,0.5);
 }
-.copy:hover{
-    animation: copy 1s 1;
-    transform:scale(1);
-    filter:hue-rotate(200deg) brightness(200%);
+@keyframes footer{
+  0% {filter: hue-rotate(0deg);}
+  50% {filter: hue-rotate(160deg) brightness(160%); box-shadow: 0px -10px 20px rgba(0,180,3,0.5);}
+  100% {filter: hue-rotate(0deg);}
 }
-@keyframes copy{
-    0% {transform:scale(1)}
-    50% {transform:scale(1.2) perspective(400px) rotateY(180deg) rotateX(180deg); filter: hue-rotate(100deg)}
-    100% {transform:scale(1)}
+.footer-texts{
+  background-color:black;
+  width:80%;
 }
-.input{
-    text-align:center;
-    margin: 15px;
-    margin-right: 45px;
-    margin-left: 45px;
-    font-size: 20px; 
-    background-color: #71EDFF;
-    color: white;
-    border-radius: 20px;
-    padding: 20px;
-    border: white double 5px;
-    transition: all 2s ease;
-    text-shadow: 0px 1px gray;
-}
-.input:focus{
-    border: aqua double 5px;
-    background-color: blue;
-    color:white;
-}
-.output{ 
-    font-size: 25px;  
-    text-align:center;
-    text-shadow: 0px 1px 2px #AAAAAA;
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    /**/ 
+/**/
