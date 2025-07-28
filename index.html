@@ -1,18 +1,54 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+
 <head>
-  <html lang="fa" dir="ltr">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>steven fonts</title>
+  <meta charset="utf-8">
+  <title>MineFA</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://db.onlinewebfonts.com/c/7296ae79f6faca68798b00fbbbee4c22?family=YekanBakh-Regular" rel="stylesheet">
 </head>
+
 <body>
-    <div id="page" class="page">
-    <input class="input" type="text" id="myInput" placeholder="یه چیزی بنویس">
-    <button dir="rtl" id="button" class="copy">copy</button>
-    <p class="output" id="output">لطفا قبل از تایپ کردن، یک فونت را انتخاب کنید:</p> 
-    <script src="script.js"></script>
+  <div class="topbar">
+    <div class="minefa">وبسـایت مـایـن‌فـــا</div>
   </div>
+  <div class="content" id="c">
+    <div class="toptext">خانه › مقالات › حسین تیموری › صفحه تستی</div>
+      <!--  -->
+    <div class="cover">
+      <img class="photo" src="https://raw.githubusercontent.com/steven750MC/unicode/refs/heads/main/characters.jpg">
+      <div class="shadow"></div> 
+      <div class="covercard">
+        <img class="creatorimg" alt="creator" src="https://cdn.imgurl.ir/uploads/l260265_steven.png"> 
+        <div class="creator">تیموریییییییییییییی</div>
+      </div>
+    </div>
+    <div class="title">متن تایتل اینجاست!</div>
+    <p>سلام این یه متن تستیه. به وبسایت ماین فا خوش اومدی سید!</p>
+        <!--  -->
+    <p class="naghl">این یه نقل قوله، از نظرم خیلی قشنگه سید. بنظرت  چه رنگی باشه؟ جالبه</p>
+    <div class="buttons">
+      <img class="right-icon" src="https://cdn.imgurl.ir/uploads/d901111_right.png"> 
+      <img class="left-icon" src="https://cdn.imgurl.ir/uploads/v702866_left.png">
+    </div>
+  </div>
+  <div class="footer">
+    <img class="footer-img" src="https://cdn.imgurl.ir/uploads/h387581_MCFA.jpg">
+    <p class="footer-texts">
+    وبسایت ماینکرفت فا
+    <br>
+    مالک و توسعه دهنده: حسین تیموری
+    <br>
+    دیزاینر و طراحی: استیونعلی   
+    </p>
+  </div>
+  
+  <script>
+    let content = document.getElementById("c");
+    window.addEventListener('load', function () {
+      content.classList.add('show'); 
+    });
+  </script>
 </body>
 </html>
